@@ -57,7 +57,7 @@ last(items, (a) => {
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
-  let result = x + y
+  let result = x + y;
   return cb(result);
 }
 
@@ -67,25 +67,25 @@ sumNums(3, 5, (c) => {
 
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
-  return cb(x * y);
+ let result = x * y;
+  return cb(result);
 }
+multiplyNums(3, 5, (c) => {
+	console.log(c)
+})
 
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-  return cb(item in list);
-}
-
-// QUESTION BY EVANS IBOK
-// So the above code is my solution but I found the code below online as a solution,
-// I'm confused how the callback in the return statement is calling either true or false,
-// is that allowed and what are the consequences?
-function contains(item, list, cb) {
   if (list.includes(item)) {
     return cb(true);
   }
   return cb(false);
 }
+
+contains('dave', items, (c) => {
+	console.log(c);
+})
 
 /* STRETCH PROBLEM */
 
