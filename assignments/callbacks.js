@@ -53,7 +53,7 @@ console.log(last);
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
-  return cb(sumNumbs(x, y));
+  return cb(sumNumbs(x + y));
 }
 console.log(sumNums);
 
