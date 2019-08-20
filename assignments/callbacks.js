@@ -68,6 +68,18 @@ function contains(item, list, cb) {
   // Pass true to the callback if it is, otherwise pass false.
   return cb(item in list);
 }
+console.log(contains);
+
+// QUESTION BY EVANS IBOK
+// So the above code is my solution but I found the code below online as a solution,
+// I'm confused how the callback in the return statement is calling either true or false,
+// is that allowed and what are the consequences?
+function contains(item, list, cb) {
+  if (list.includes(item)){
+    return cb(true);
+  }
+  return cb(false);
+}
 
 /* STRETCH PROBLEM */
 
