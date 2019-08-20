@@ -1,6 +1,6 @@
 // Create a higher order function and invoke the callback function to test your work. You have been provided an example of a problem and a solution to see how this works with our items array.  Study both the problem and the solution to figure out the rest of the problems.
 
-const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
+const items = ["Pencil", "Notebook", "yo-yo", "Gum"];
 
 /* 
 
@@ -38,17 +38,22 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
   // "this Pencil is worth a million dollars!"
 */
 
-let result = []
 function getLength(arr, cb) {
   // getLength passes the length of the array into the callback.
   return cb(arr.length);
 }
-
+getLength(items, (a) => {
+  console.log(a);
+});
 
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
-  return cb(arr.length - 1);
+  return cb(arr[arr.length - 1]);
 }
+
+last(items, (a) => {
+	console.log(a);
+  });
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
@@ -71,7 +76,7 @@ function contains(item, list, cb) {
 // I'm confused how the callback in the return statement is calling either true or false,
 // is that allowed and what are the consequences?
 function contains(item, list, cb) {
-  if (list.includes(item)){
+  if (list.includes(item)) {
     return cb(true);
   }
   return cb(false);
