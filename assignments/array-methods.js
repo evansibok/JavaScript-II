@@ -108,7 +108,21 @@ console.log(ticketPriceTotal);
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
+// Return an array of runners with 3 Extra Large and Small shirt sizes
+
+let threeXLS = []
+
+function newCombination(combSizes){
+  if (combSizes.shirt_size === '3XL' || combSizes.shirt_size === 'S')
+  return threeXLS.push(combSizes);
+}
+
+runners.filter(newCombination)
+console.log(threeXLS);
 
 // Problem 2
+// Eliminate Runners with donations less than 100
+
+
 
 // Problem 3
