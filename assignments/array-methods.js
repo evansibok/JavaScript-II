@@ -121,8 +121,14 @@ runners.filter(newCombination)
 console.log(threeXLS);
 
 // Problem 2
-// Eliminate Runners with donations less than 100
+// Return Runners donation amounts in a string
 
+let donationAmount = []
 
+function some(amount){
+  return donationAmount.push(`${amount.donation}`);
+}
+runners.map(some)
+console.log(JSON.stringify(donationAmount))
 
 // Problem 3
