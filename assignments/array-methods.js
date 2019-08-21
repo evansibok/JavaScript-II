@@ -536,9 +536,9 @@ console.log(JSON.stringify(donationAmount));
 
 let runnersWithCompanyNameS = [];
 
-function companyWithS(name){
-  if (name.company_name.charAt(0) === 'S')
-  return runnersWithCompanyNameS.push(name);
+function companyWithS(name) {
+  if (name.company_name.charAt(0) === "S")
+    return runnersWithCompanyNameS.push(name);
 }
 
 runners.filter(companyWithS);
